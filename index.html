@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Nama</title>
+</head>
+<body>
+  <h1>Form Nama</h1>
+  <form id="form">
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" name="nama"><br><br>
+    <button id="kirim">Kirim</button>
+  </form>
+  <div id="hasil"></div>
+
+  <script>
+    const form = document.getElementById('form');
+    const namaInput = document.getElementById('nama');
+    const hasilDiv = document.getElementById('hasil');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nama = namaInput.value;
+      hasilDiv.innerText = `Halo, ${nama}!`;
+    });
+  </script>
+</body>
+</html>
